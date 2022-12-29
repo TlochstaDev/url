@@ -1,0 +1,25 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script id="execute-js">
+        Hello World
+      </script>
+    <execute-content>
+    </execute-content>
+    <!-- Imported Scripts from Execute -->
+    <script>
+      var url_string = window.location.href;
+      var url = new URL(url_string);
+      <!-- Get HTML Data -->
+      var html = url.searchParams.get("html");
+      document.getElementsByTagName("execute-content").innerHTML = html;
+      <!-- Get JavaScript Data -->
+      var js = url.searchParams.get("js");
+      document.getElementById("execute-js").replace('Hello World', js);
+    </script>
+    <footer>
+      <p>This page was generated with Execute. Create your own page today by clicking <a href="https://app.executeapp.ga/generate?ref=url">here</a>!<br><i>Report any malicious content by clicking <a href="https://app.executeapp.ga/sites/report">here</a>. Thank you!</p>
+    </footer>
+  </body>
+</html>
